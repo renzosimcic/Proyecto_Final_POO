@@ -1,13 +1,19 @@
-/*
- * To change this template, choose Tools | Templates
- * and open the template in the editor.
- */
+
 package benedictoxvi;
+
+import java.util.ArrayList;
 
 /**
  *
  * @author renzo
  */
 public class AltaGrupoEstudio {
+    
+                private ArrayList<Compra> compras;
+    
+        public AltaGrupoEstudio() {
+        // Crear la coleccion 
+        compras = new ArrayList<Compra>();
+    }
     
 }
