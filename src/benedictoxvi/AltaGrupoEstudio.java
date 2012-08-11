@@ -53,7 +53,39 @@ private void validarDatos(String nombreGrupo,String fechaInicio, String fechaFin
             if (grupoestudio.getNombreGrupo().equals(numero))
                 return grupoestudio;
          return null;
-    } 
+    }
+        
+    public void listarDatos()throws BusinessException{
+        
+        
+         for(GrupoEstudio grupoestudio : gruposEstudio)
+            System.out.println(
+                    " "  + grupoestudio.getNombreGrupo() + 
+                    "\t" + grupoestudio.getAcademia() + 
+                    "\t" + grupoestudio.getCurso() +
+                    "\t" + grupoestudio.getFechaInicio() +
+                    "\t" + grupoestudio.getFechaFin() +
+                    "\t" + grupoestudio.getEstado() +
+                    "\t" + grupoestudio.getDescripcion() +
+                    "\t" + grupoestudio.getInstructor() +
+                    "\t" + grupoestudio.getSyllabus() +
+                    "\t" + grupoestudio.getLocal() +
+                    "\t" + grupoestudio.getAula()
+                    
+                    );
+        
+    }
+    
+    public String BuscarGrupos() throws BusinessException{
+        
+        String mensaje = "";
+        
+         for(GrupoEstudio grupoestudio : gruposEstudio)
+             System.out.println();
+        
+        
+        return mensaje;
+    }
         
         
     
