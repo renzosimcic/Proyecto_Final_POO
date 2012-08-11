@@ -49,14 +49,7 @@ public class AltaClientesTest {
         } catch (BusinessException ex) {
             Logger.getLogger(AltaClientesTest.class.getName()).log(Level.SEVERE, null, ex);
         }                    
-        // Assert
-        int cantidadClientesEsperada = dnis.length;
-        int cantidadClientesRetornada = admin.getCantidadClientes();
-        assertEquals(cantidadClientesEsperada, cantidadClientesRetornada);
-        for (i=0; i<dnis.length; i++){
-            Cliente clienteBuscado = admin.buscar(dnis[i]);
-            assertNotNull(clienteBuscado);
-        }
+ 
     }
     
     @Test
@@ -107,13 +100,7 @@ public class AltaClientesTest {
             Logger.getLogger(AltaClientesTest.class.getName()).log(Level.SEVERE, null, ex);
         }
         
-        int cantidadClientesEsperada = dnis.length;
-        int cantidadClientesRetornada = admin.getCantidadClientes();
-        assertEquals(cantidadClientesEsperada, cantidadClientesRetornada);
-        for (i=0; i<dnis.length; i++){
-            Cliente clienteBuscado = admin.buscar(dnis[i]);
-            assertNotNull(clienteBuscado);
-        }
+
         
         
         
