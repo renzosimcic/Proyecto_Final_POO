@@ -49,7 +49,7 @@ public class AltaClientes {
     public void registrar(String dni, String apellidoPaterno, String apellidoMaterno, String nombre, String email, String telefono, String fecha) 
             throws BusinessException {
         validarDatos(dni, apellidoPaterno, apellidoMaterno, nombre, email, telefono);
-        validaDuplicidad(dni);
+        //validaDuplicidad(dni);
         Cliente nuevo = new Cliente(dni, apellidoPaterno, apellidoMaterno, nombre, email, telefono, fecha);
         clientes.add(nuevo);
     }

@@ -1,27 +1,15 @@
-/*
- * To change this template, choose Tools | Templates
- * and open the template in the editor.
- */
+
 package benedictoxvi;
 
-/**
- *
- * @author renzo
- */
-public class Cliente {
+
+public class Cliente extends Persona {
    
-    private String Nombre;
-    private String ApellidoPaterno;
-    private String ApellidMaterno;
-    private String email;
-    private String dni;
-    private String telefono;
-    private String fecha;
+
 
     public Cliente(String Nombre, String ApellidoPaterno, String ApellidMaterno, String email, String dni, String telefono, String fecha) {
-        this.Nombre = Nombre;
-        this.ApellidoPaterno = ApellidoPaterno;
-        this.ApellidMaterno = ApellidMaterno;
+        this.nombre = Nombre;
+        this.apellidoPaterno = ApellidoPaterno;
+        this.apellidoMaterno = ApellidMaterno;
         this.email = email;
         this.dni = dni;
         this.telefono = telefono;
@@ -29,27 +17,27 @@ public class Cliente {
     }
 
     public String getApellidMaterno() {
-        return ApellidMaterno;
+        return apellidoMaterno;
     }
 
     public void setApellidMaterno(String ApellidMaterno) {
-        this.ApellidMaterno = ApellidMaterno;
+        this.apellidoMaterno = ApellidMaterno;
     }
 
     public String getApellidoPaterno() {
-        return ApellidoPaterno;
+        return apellidoPaterno;
     }
 
     public void setApellidoPaterno(String ApellidoPaterno) {
-        this.ApellidoPaterno = ApellidoPaterno;
+        this.apellidoPaterno = ApellidoPaterno;
     }
 
     public String getNombre() {
-        return Nombre;
+        return nombre;
     }
 
     public void setNombre(String Nombre) {
-        this.Nombre = Nombre;
+        this.nombre = Nombre;
     }
 
     public String getDni() {

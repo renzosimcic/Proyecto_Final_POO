@@ -1,24 +1,11 @@
 
 package benedictoxvi;
 
-/**
- *
- * @author renzo
- */
-public class Compra {
-    
-   private String concepto;
-   private String numero;	
-   private String fechadeemision;
-   private String empresa;
-   private String fechadevencimiento;
-   private String fechadepago;	
-   private String estado;
-   private double subtotal;	
-   private double igv;
-   private double total;	
-   private double moneda;
 
+public class Compra extends Operacion {
+   
+
+   
     public Compra(String concepto, String numero, String fechadeemision, String empresa, String fechadevencimiento, String fechadepago, String estado, double subtotal, double igv, double total, double moneda) {
         this.concepto = concepto;
         this.numero = numero;

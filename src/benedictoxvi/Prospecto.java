@@ -1,19 +1,12 @@
 
 package benedictoxvi;
 
-import java.util.Date;
 
 
-public class Prospecto {
+
+public class Prospecto extends Persona{
     
-    private String dni;
-    private String apellidoPaterno;
-    private String apellidoMaterno;
-    private String nombre;
-    private String email;
-    private String telefono;
-    
-    private String fecha;
+
 
     public Prospecto(String dni, String apellidoPaterno, String apellidoMaterno, String nombre, String email, String telefono, String fecha) {
         this.dni = dni;
