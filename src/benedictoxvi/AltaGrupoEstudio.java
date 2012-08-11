@@ -9,11 +9,52 @@ import java.util.ArrayList;
  */
 public class AltaGrupoEstudio {
     
-                private ArrayList<Compra> compras;
+       private ArrayList<GrupoEstudio> gruposEstudio;
     
         public AltaGrupoEstudio() {
         // Crear la coleccion 
-        compras = new ArrayList<Compra>();
+        gruposEstudio = new ArrayList<GrupoEstudio>();
     }
+        
+private void validarDatos(String nombreGrupo,String fechaInicio, String fechaFin) throws BusinessException{
+        String mensaje = "";
+        if (nombreGrupo==null || nombreGrupo.isEmpty())
+            mensaje += "\nConcepto no puede ser nulo o vacio";
+            
+        if (fechaInicio==null || fechaInicio.isEmpty())
+            mensaje += "\nConcepto no puede ser nulo o vacio";
+            
+        if (fechaFin==null || fechaFin.isEmpty())
+            mensaje += "\nConcepto no puede ser nulo o vacio";
+         if (! mensaje.isEmpty())
+            throw new BusinessException(mensaje); 
+}        
+
+
+        public int getCantidadGrupoEstudio(){
+    
+            return gruposEstudio.size();
+            
+        }
+        
+        public void registrarGrupo(String nombreGrupo, String academia, String curso, String fechaInicio, 
+                String fechaFin, String estado, String descripcion, String instructor, String syllabus, String local, String aula, String ubicacion) throws BusinessException{
+            
+            validarDatos(nombreGrupo, fechaInicio, fechaFin);
+            
+            GrupoEstudio nuevo = new GrupoEstudio(nombreGrupo, academia, curso, fechaInicio, fechaFin, estado, descripcion, instructor, syllabus, local, aula, ubicacion);
+            gruposEstudio.add(nuevo);
+            
+             }
+        
+        public GrupoEstudio buscar(String numero) {
+       // Busqueda secuencial por dni
+        for(GrupoEstudio grupoestudio : gruposEstudio)
+            if (grupoestudio.getNombreGrupo().equals(numero))
+                return grupoestudio;
+         return null;
+    } 
+        
+        
     
 }
